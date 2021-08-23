@@ -10,7 +10,7 @@ set relativenumber
 
 call plug#begin('~/.config/nvim/plugged')
 
-"MOVE INSIDE DOC
+"Plugins instaled
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
@@ -20,10 +20,11 @@ call plug#end()
 let NERDTreeQuitOnOpen=1
 let mapleader=" "
 
+"Shortcuts move inside doc, move through folder 
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
 
-"Shotcuts save and quit
+"Shortcuts save and quit
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 
