@@ -1,6 +1,11 @@
 #! /bin/sh
+#personal rho dotfiles
 
 pgrep -x sxhkd > /dev/null || sxhkd &
+picom --experimental-backends &
+feh --bg-scale ~/Imágenes/wallpapers/krimkerre_4_endy_neon.jpg &
+~/.config/polybar/launch.sh --hack &
+killall mate-notifications-daemon; dunst &
 
 bspc monitor -d 1 2 3 4 5 6 7  
 
@@ -12,12 +17,9 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Telegram-desktop desktop='^6' state=floating follow=on
-bspc rule -a code desktop='^1'
-bspc rule -a brave desktop='^2'
+bspc rule -a code-oss desktop='^1'
+bspc rule -a Brave-browser desktop='^2'
 bspc rule -a Chromium desktop='^2'
+bspc rule -a zoom state=floating
 
-exec ~/.config/polybar/launch.sh --hack &
-exec picom &
-exec feh --bg-scale ~/Imágenes/wallpapers/krimkerre_4_endy_neon.jpg &
-exec nm-applet &
 exec xsetroot -cursor_name left_ptr & 

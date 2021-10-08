@@ -1,30 +1,17 @@
 set number 
-set mouse 
+set mouse=a 
 set numberwidth=1
 set clipboard=unnamed
-syntax enable
+syntax on 
 set encoding=utf-8
 set showmatch
 set sw=2
 set relativenumber
+set noshowmode
 
-call plug#begin('~/.config/nvim/plugged')
-
-"Plugins instaled
-Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdtree'
-Plug 'christoomey/vim-tmux-navigator'
-
-call plug#end()
+"Call init plug
+so ~/.config/nvim/plug.vim
+"Call keymap
+so ~/.config/nvim/maps.vim
 
 let NERDTreeQuitOnOpen=1
-let mapleader=" "
-
-"Shortcuts move inside doc, move through folder 
-nmap <Leader>s <Plug>(easymotion-s2)
-nmap <Leader>nt :NERDTreeFind<CR>
-
-"Shortcuts save and quit
-nmap <Leader>w :w<CR>
-nmap <Leader>q :q<CR>
-
