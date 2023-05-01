@@ -187,22 +187,25 @@ awful.keyboard.append_global_keybindings({
 
 	--- Color picker
 	awful.key({ mod, shift }, "x", function()
-		awful.spawn.easy_async_with_shell(apps.utils.color_picker, function() end)
+		awful.spawn.easy_async_with_shell(apps.utils.color_picker, function()
+		end)
 	end, { description = "open color picker", group = "hotkeys" }),
 
 	--- Screenshots
 	awful.key({}, "Print", function()
-		awful.spawn.easy_async_with_shell(apps.utils.full_screenshot, function() end)
+		awful.spawn.easy_async_with_shell(apps.utils.full_screenshot, function()
+		end)
 	end, { description = "take a full screenshot", group = "hotkeys" }),
 
 	awful.key({ alt }, "Print", function()
-		awful.spawn.easy_async_with_shell(apps.utils.area_screenshot, function() end)
+		awful.spawn.easy_async_with_shell(apps.utils.area_screenshot, function()
+		end)
 	end, { description = "take a area screenshot", group = "hotkeys" }),
 
 	--- Lockscreen
-	awful.key({ mod, alt }, "l", function()
-		lock_screen_show()
-	end, { description = "lock screen", group = "hotkeys" }),
+	-- awful.key({ mod, alt }, "l", function()
+	-- 	lock_screen_show()
+	-- end, { description = "lock screen", group = "hotkeys" }),
 
 	--- Exit screen
 	awful.key({ mod }, "Escape", function()
